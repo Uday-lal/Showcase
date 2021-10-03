@@ -1,2 +1,8 @@
 # venv
 venv
+
+# projectConfig
+projectConfig.json
+
+# __pycache__
+__pycache__
