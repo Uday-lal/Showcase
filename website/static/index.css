@@ -47,25 +47,26 @@ div.nav-center {
 
 div.nav-center > div.input {
   background-color: ghostwhite;
+  border-radius: 50px;
 }
 
-div.input > button > i {
+div.input > form > button > i {
   color: white;
 }
 
-div.input > button {
+div.input > form > button {
   background-color: #2e2a38;
   width: 15%;
   cursor: pointer;
 }
 
-div.input > * {
+div.input > form > * {
   border: none;
   padding: 5px;
   border-radius: 50px;
 }
 
-div.input {
+div.input > form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +75,7 @@ div.input {
   box-shadow: 0px 4px 47px 8px rgba(0, 0, 0, 0.71);
 }
 
-div.input > input {
+div.input > form > input {
   background-color: ghostwhite;
   outline: none;
   width: 85%;
@@ -159,8 +160,7 @@ div.art-content:hover > img {
 }
 
 div.art-content:hover {
-  color: limegreen;
-  transition: 0.2s ease-in-out;
+  cursor: context-menu;
 }
 
 @keyframes ripple {
