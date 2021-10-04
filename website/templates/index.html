@@ -16,8 +16,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Showcase</title>
+    <title>Vitrine World class image and art gallery</title>
   </head>
+
   <body>
     <div class="header">
       <img src="{{ art_image }}" alt="header-img" />
@@ -35,7 +36,31 @@
       </div>
     </div>
     <div class="body">
-      <h2>body</h2>
+      <div class="grid">
+        {% for col in images %}
+        <div class="col-grid">
+          {% for image in col %}
+          <div class="art-content">
+            <img
+              src="{{ image['urls']['small'] }}"
+              alt="img"
+              id="{{ image['id'] }}"
+            />
+            <div class="text-content">
+              <h2>{{ image.user.name }}</h2>
+              {% if image.alt_description %}
+              <p>{{ image.alt_description }}</p>
+              {% elif image.discription%}
+              <p>{{ image.discription }}</p>
+              {% else %}
+              <p>This image don't have discryption</p>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
     </div>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>

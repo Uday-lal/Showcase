@@ -6,3 +6,6 @@ projectConfig.json
 
 # __pycache__
 __pycache__
+
+# .vscode
+.vscode
