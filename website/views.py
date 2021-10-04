@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template
 from .api import Api
 import random
-import pprint
 
 
 views = Blueprint("views", __name__)
