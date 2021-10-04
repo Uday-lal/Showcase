@@ -1,7 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
 * {
   margin: 0px;
   padding: 0px;
   font-family: "Noto Serif", serif;
+}
+
+/* Header Img */
+div.header > img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(65%);
+}
+
+/* Navbar */
+nav {
+  z-index: 1;
+  padding: 10px;
+}
+
+nav > span.nav-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: ghostwhite;
+}
+
+div.nav-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 24vh;
+  justify-content: space-around;
+}
+
+div.nav-center > div.input {
+  background-color: ghostwhite;
+}
+
+div.input > button > i {
+  color: white;
+}
+
+div.input > button {
+  background-color: #2e2a38;
+  width: 15%;
+  cursor: pointer;
+}
+
+div.input > * {
+  border: none;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+div.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 40vw;
+  box-shadow: 0px 4px 47px 8px rgba(0, 0, 0, 0.71);
+}
+
+div.input > input {
+  background-color: ghostwhite;
+  outline: none;
+  width: 85%;
+  font-family: "Comfortaa", cursive;
+}
+
+h1 {
+  color: ghostwhite;
+  font-size: 3vw;
 }

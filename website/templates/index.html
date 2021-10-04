@@ -8,9 +8,29 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='index.css') }}"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Showcase</title>
   </head>
   <body>
-    <h1>Showcase</h1>
+    <div class="header">
+      <img src="{{ art_image }}" alt="header-img" />
+      <nav>
+        <span class="nav-title">Vitrine</span>
+      </nav>
+      <div class="nav-center">
+        <h1>World class image and art gallery.</h1>
+        <div class="input">
+          <input type="text" placeholder="Search" />
+          <button><i class="material-icons"> search </i></button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
