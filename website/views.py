@@ -12,8 +12,9 @@ def index():
         query = request.form.get("search")
         return redirect(url_for('views.result', query=query))
     unsplash_api = Api()
+    page_on = random.randint(1, 5)
     images = format_api(unsplash_api.get_images())
-    art_image = random.choice(unsplash_api.query("art", 1)["results"])
+    art_image = random.choice(unsplash_api.query("art", page_on)["results"])
     return render_template(
         "index.html",
         art_image=art_image["urls"]["full"],
@@ -27,7 +28,7 @@ def result(query):
     page_on = random.randint(1, 5)
     images = format_api(unsplash_api.query(
         query=query, page_on=page_on)["results"])
-    art_image = random.choice(unsplash_api.query("art", 1)["results"])
+    art_image = random.choice(unsplash_api.query("art", page_on)["results"])
     return render_template(
         "result.html",
         images=images,
