@@ -28,9 +28,15 @@
         <h1>World class image and art gallery.</h1>
         <div class="input">
           <input type="text" placeholder="Search" />
-          <button><i class="material-icons"> search </i></button>
+          <button class="ripple-btn" style="border-radius: 50px">
+            <i class="material-icons"> search </i>
+          </button>
         </div>
       </div>
     </div>
+    <div class="body">
+      <h2>body</h2>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>
 </html>
